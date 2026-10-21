@@ -2,6 +2,16 @@
 
 Dashboard web estático y responsivo publicado mediante GitHub Pages. Incluye un resumen ejecutivo común para Delitos priorizados, Ley STOP y STOP; además incorpora vistas detalladas, comparación de prefectura y un mapa territorial integrado en Delitos priorizados.
 
+## Novedades V7.3
+
+- Comparación de Prefectura por cantidad, tasa por 100.000 habitantes e índice comunal.
+- Población y tasa incluidas en el resumen comunal y en la exportación CSV.
+- Pestaña de metodología y criterios de interpretación.
+- Cobertura territorial calculada para el periodo seleccionado.
+- Mejoras de lenguaje, accesibilidad y navegación en tablas responsivas.
+
+Poblaciones de referencia: Lo Barnechea 112.620; Vitacura 86.420; Las Condes 296.134; La Reina 89.870.
+
 ## Actualización semanal
 
 1. Verifica que el nuevo `Dataset depurado_... hasta DD-MM-AA.xlsx` esté guardado y cerrado en la carpeta histórica institucional.
@@ -19,3 +29,4 @@ El script modifica siempre este mismo `index.html`, por lo que la dirección pú
 - Mapa: se usan los polígonos de `cuadrantes.rds` y la columna `cuadra_dep` del Dataset depurado. Permite visualizar cantidades, diferencias absolutas y variaciones porcentuales para 2026/2025, 2025/2024 y 2026/2024, usando periodos equivalentes. San Enrique se excluye y SRA, SRB y SRC se informan fuera del mapa urbano.
 
 El actualizador se detiene ante duplicados, archivos temporales abiertos, fechas inconsistentes, cambios de estructura o fuentes faltantes.
+También se detiene si el mapa queda sin polígonos o sin conteos, evitando publicar accidentalmente una versión territorial vacía.
